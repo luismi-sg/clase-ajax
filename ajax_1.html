@@ -12,30 +12,23 @@
 	<script>
 
 		const lista = document.querySelector("ul");
+
 		// Crear una conexión (objeto XHR)
-
 		const conexion = new XMLHttpRequest();
-
-
+		
 		// Configurar la conexión
-
 		conexion.open("GET","prueba.txt");
 
-
 		// Enviar la PETICIÓN 
-
 		conexion.send();
 
 		// Gestionar la RESPUESTA
-
 		conexion.addEventListener("load", function(){
 			conexion.responseText.split(",").forEach( palabra => {
 				let li = document.createElement("li");
 				li.innerHTML = palabra;
 				lista.appendChild(li);
 			});
-
-			console.log(palabras);
 		});
 
 
