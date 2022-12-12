@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		
+		// Crear una conexión (objeto XHR)
+
+		const conexion = new XMLHttpRequest();
+
+
+		// Configurar la conexión
+
+		conexion.open("GET","prueba.txt");
+
+
+		// Enviar la PETICIÓN 
+
+		conexion.send();
+
+		// Gestionar la RESPUESTA
+
+		conexion.addEventListener("load", function(){
+			console.log(this.responseText);
+		});
+
+
+	</script>
+</body>
+</html>
